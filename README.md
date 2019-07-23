@@ -32,14 +32,19 @@ As a user i should be able to add a new place.
   
 - config.env
 - .travis.yml
+- .gitignore
 - readme.md
 
 ### Sketch:
 
 ![image](https://user-images.githubusercontent.com/27896127/61692669-c0714a00-ad36-11e9-8608-c476a68b9072.png)
 
+### Scheme:
+![image](https://user-images.githubusercontent.com/48014915/61699201-1a780c80-ad43-11e9-8e35-5e57fd601d6d.png)
+
+![image](https://user-images.githubusercontent.com/48014915/61699184-151ac200-ad43-11e9-8ac9-0aed6106130e.png)
 ### Team members:
 - [Sahar](https://github.com/saharAdem)
-- [Yaqoot](https://github.com/yaqootturman)
 - [Sulieman](https://github.com/sulieman1)
+- [Yaqoot](https://github.com/yaqootturman)
 - [Yousef](https://github.com/YousefQwasmeh)

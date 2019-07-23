@@ -1,0 +1,31 @@
+{
+  "name": "PalestinePlaces",
+  "version": "1.0.0",
+  "description": "## it is a website consider about special places in plasetine to help user find the suggestion places in entered city.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fack2/PalestinePlaces.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fack2/PalestinePlaces/issues"
+  },
+  "homepage": "https://github.com/fack2/PalestinePlaces#readme",
+  "devDependencies": {
+    "env2": "^2.2.2",
+    "nodemon": "^1.19.1",
+    "request": "^2.88.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  }
+}
