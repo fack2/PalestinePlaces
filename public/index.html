@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-
-<img id="bgImg" src="https://i0.wp.com/www.wefindyougo.com/wp-content/uploads/2014/01/Haram-ash-Sharif-Jerusalem.jpg?resize=798%2C350&ssl=1" alt="bg" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/public/main.css" />
+  </head>
+  <body>
+    <img
+      id="bgImg"
+      src="https://i0.wp.com/www.wefindyougo.com/wp-content/uploads/2014/01/Haram-ash-Sharif-Jerusalem.jpg?resize=798%2C350&ssl=1"
+      alt="bg"
+    />
     <label for="form">
       <form id="form" class="form" action="/search" method="GET">
         <input id="search" name="input" type="search" />
@@ -14,52 +17,62 @@
       </form>
     </label>
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/addPlace">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="/addPlace">
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+        </div>
+
+        <div class="container">
+          <label for="name"><b>Name of Place</b></label>
+          <input
+            type="text"
+            placeholder="Enter Name of Place"
+            name="name"
+            required
+          />
+
+          <label for="imgURL"><b>img url</b></label>
+          <input
+            type="text"
+            placeholder="Enter img URL"
+            name="imgURL"
+            required
+          />
+
+          <button type="submit">Add</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
     </div>
 
-    <div class="container">
-      <label for="name"><b>Name of Place</b></label>
-      <input type="text" placeholder="Enter Name of Place" name="name" required>
-
-      <label for="imgURL"><b>img url</b></label>
-      <input type="text" placeholder="Enter img URL" name="imgURL" required>
-        
-      <button type="submit">Add</button>
-
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-
-    </div>
-  </form>
-</div>
-
-    <div id = "discriptions"></div>
-    <footer id="footer" >
-      <p>Suggest Place</p> 
-      <button id="addPlace" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">addPlace</button>
+    <div id="discriptions"></div>
+    <footer id="footer">
+      <p>Suggest Place</p>
+      <button
+        id="addPlace"
+        onclick="document.getElementById('id01').style.display='block'"
+        style="width:auto;"
+      >
+        addPlace
+      </button>
     </footer>
 
-
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-<script type="text/javascript" src="dom.js"></script>
-
-</body>
+    <script type="text/javascript" src="/public/dom.js"></script>
+  </body>
 </html>
