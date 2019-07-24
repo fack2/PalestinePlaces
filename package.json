@@ -4,7 +4,7 @@
   "description": "## it is a website consider about special places in plasetine to help user find the suggestion places in entered city.",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "NODE_ENV=test node tests/test.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,5 +27,8 @@
     "request": "^2.88.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "pg": "^7.11.0"
   }
 }
