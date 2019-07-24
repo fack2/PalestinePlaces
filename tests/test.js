@@ -8,14 +8,21 @@ tape("tape is working", t => {
   t.end();
 });
 
+tape("tape is working2", t => {
+  t.equals(1, 1, "one equals one");
+  t.end();
+});
 tape("get data from database", t => {
-  const expected = 7;
+  const expected = 2;
 
   runDbBuild(function(err, res) {
-    const rx = getData((err, res) => {
+    getData("heb", (err, res) => {
       if (err) console.log("test error", err);
-      t.deepEqual(expected, res, "testint the number of rows");
+      t.equal(expected, res.length, "testing the number of rows");
+      // t.equal(1, 2, "001111111");
+      // t.end();
     });
+    // console.log("je");
     t.end();
   });
 });
