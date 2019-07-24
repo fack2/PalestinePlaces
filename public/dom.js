@@ -7,11 +7,9 @@ const request = (url, cb) => {
       return cb(data);
     });
 };
-// Get the modal
 const modal = document.getElementById("id01");
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
@@ -22,7 +20,7 @@ const info = document.getElementById("info");
 const buttonSearch = document.getElementById("buttonSearch");
 buttonSearch.addEventListener("click", e => {
   e.preventDefault();
-  
+
   request(`/search?name=${inputSearch.value}`, data => {
     data.forEach(element => {
       const place = document.createElement("div");
@@ -39,10 +37,10 @@ buttonSearch.addEventListener("click", e => {
       const sort = document.createElement("h4");
       sort.setAttribute("class", "sort");
       sort.innerText = element.sort;
-      const description = document.createElement("p");
+      const description = document.createElement("article");
       description.setAttribute("class", "description");
       description.innerText = element.description;
-      // cityName.innerHTML="aaaaaaaaaaaaaa";
+
       place.appendChild(img);
       place.appendChild(placeName);
       place.appendChild(cityName);
