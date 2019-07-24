@@ -1,11 +1,9 @@
 const dbConnection = require("../db_connection.js");
-const qs = require("qs");
-const addData = (data, cb) => {
-  const place = qs.parse(data);
+const addData = (name,imgURL,sort,description,city, cb) => {
 
   dbConnection.query(
     "SELECT * FROM  city WHERE name = ($1) ",
-    [place.city],
+    [city],
     (err, res) => {
 
       if (err) return cb(err);
@@ -13,7 +11,7 @@ const addData = (data, cb) => {
       if(res.rows[0]){
 
   dbConnection.query("INSERT INTO place (name,photo,sort,description,cityID) VALUES ($1, $2, $3, $4, (select id from city where name=$5))",
-  [place.name,place.imgURL,place.sort,place.description,place.city],(err, res2)=>{
+  [name,imgURL,sort,description,city],(err, res2)=>{
     
     if (err) return cb(err);
     
@@ -25,13 +23,13 @@ const addData = (data, cb) => {
 
   dbConnection.query(
     "INSERT INTO city (name) VALUES ($1) ",
-    [place.city],
+    [city],
     (err, res) => {
 
       if (err) return cb(err);
 
       dbConnection.query("INSERT INTO place (name,photo,sort,description,cityID) VALUES ($1, $2, $3, $4, (select id from city where name=$5) )",
-      [place.name,place.imgURL,place.sort,place.description,place.city],(err, res2)=>{
+      [name,imgURL,sort,description,city],(err, res2)=>{
         
         if (err) return cb(err);
 

@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const qs = require("qs");
 const request = require("request");
 const getData = require("../src/database/queries/search.js");
 const addData = require("../src/database/queries/add.js");
@@ -69,7 +70,8 @@ const postPlaceHandler = (request, response) => {
     data += chunk;
   });
   request.on('end', () => {
-    addData(data, err => {
+    const place = qs.parse(data);
+    addData(place.name,place.imgURL,place.sort,place.description,place.city, err => {
       if (err) {
         response.writeHead(500, {
           "Content-Type": "text/html"
