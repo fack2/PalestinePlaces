@@ -6,19 +6,19 @@
   </head>
   <body>
     <img
-      id="bgImg"
+      class="bgImg"
       src="https://i0.wp.com/www.wefindyougo.com/wp-content/uploads/2014/01/Haram-ash-Sharif-Jerusalem.jpg?resize=798%2C350&ssl=1"
       alt="bg"
     />
     <label for="form">
-      <form id="form" class="form" action="/search" method="GET">
+      <form id="form" class="form" action="/ser" method="GET">
         <input id="search" name="input" type="search" />
-        <input type="button" value="search" />
+        <input type="submit" value="search" id="buttonSearch" />
       </form>
     </label>
 
     <div id="id01" class="modal">
-      <form class="modal-content animate" action="/addPlace">
+      <form class="modal-content animate" action="/addPlace" method="POST">
         <div class="imgcontainer">
           <span
             onclick="document.getElementById('id01').style.display='none'"
@@ -45,6 +45,27 @@
             name="imgURL"
             required
           />
+          <label for="sort"><b>Sort</b></label>
+          <input
+            type="text"
+            placeholder="Enter sort"
+            name="sort"
+            required
+          />
+          <label for="descriptions"><b>Descriptions</b></label>
+          <input
+            type="text"
+            placeholder="Enter descriptions"
+            name="description"
+            required
+          />
+          <label for="city"><b>City Name</b></label>
+          <input
+            type="text"
+            placeholder="Enter city name"
+            name="city"
+            required
+          />
 
           <button type="submit">Add</button>
         </div>
@@ -61,7 +82,7 @@
       </form>
     </div>
 
-    <div id="discriptions"></div>
+    <section id="info" class="info"></section>
     <footer id="footer">
       <p>Suggest Place</p>
       <button
