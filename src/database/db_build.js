@@ -1,15 +1,18 @@
-require('env2')('./config.env');
+const fs = require("fs");
+const path = require("path");
 
-const {
-    Pool
-} = require('pg');
+const dbConnection = require("./db_connection.js");
 
-const connectionString = process.env.DB_URL;
+const sqlPath = path.join(__dirname, "db_build.sql");
+const sql = fs.readFileSync(sqlPath).toString();
 
-if (!connectionString) {
-    throw new Error('please set a DB_URL  env variable');
-}
-module.exports = new Pool({
-    connectionString,
-    ssl: !connectionString.includes('localhost')
-});
+
+
+const runDbBuild = cb => {
+console.log("build");
+console.log(sql);
+dbConnection.query(sql, cb);
+};
+module.exports = runDbBuild;
+
+_
