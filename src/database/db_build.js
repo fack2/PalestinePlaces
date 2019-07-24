@@ -1,4 +1,3 @@
-// Add code below to connect to your database
 require('env2')('./config.env');
 
 const {
@@ -6,7 +5,6 @@ const {
 } = require('pg');
 
 const connectionString = process.env.DB_URL;
-console.log('DB_URL', connectionString);
 
 if (!connectionString) {
     throw new Error('please set a DB_URL  env variable');
