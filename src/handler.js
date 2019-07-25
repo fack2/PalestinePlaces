@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const qs = require("qs");
-const request = require("request");
 const getData = require("../src/database/queries/search.js");
 const addData = require("../src/database/queries/add.js");
 
