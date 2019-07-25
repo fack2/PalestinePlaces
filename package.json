@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/fack2/PalestinePlaces#readme",
   "devDependencies": {
-    "env2": "^2.2.2",
     "nodemon": "^1.19.1",
-    "request": "^2.88.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   },
   "dependencies": {
+    "request": "^2.88.0",
+    "env2": "^2.2.2",
     "pg": "^7.11.0"
   }
 }
