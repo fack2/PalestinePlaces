@@ -47,6 +47,17 @@ As a user i should be able to add a new place.
 ![image](https://user-images.githubusercontent.com/48014915/61699201-1a780c80-ad43-11e9-8e35-5e57fd601d6d.png)
 
 ![image](https://user-images.githubusercontent.com/48014915/61699184-151ac200-ad43-11e9-8ac9-0aed6106130e.png)
+
+## Instructions :
+To use our Repo without heroku database,you should: 
+  - npm i pg env2 command 
+  - CREATE DATABASE (nameOfDB) - command
+  - CREATE USER (userName) with password 'password' - command
+  - GRANT ALL PRIVILEGES ON DATABASE (nameOfDB) to (userName) -command
+  - go to root and make config.env file
+  - Copy paste this into the file. "DB_URL = postgres://userName:password@localhost:5432/nameOfDB". This is to establish connection between our server and database. And it is used throughout the code of the app.
+
+  
 ### Team members:
 - [Sahar](https://github.com/saharAdem)
 - [Sulieman](https://github.com/sulieman1)
