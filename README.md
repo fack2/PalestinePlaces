@@ -2,6 +2,8 @@
 
 ## it is a website consider about special places in plasetine to help user find the suggestion places in entered city. 
 
+### [website](https://palestenian-places.herokuapp.com/)
+
 ### user journey: 
 
 As a user i should be able to enter the city name and get a list of places in that city. 
@@ -35,6 +37,8 @@ As a user i should be able to add a new place.
 - .gitignore
 - readme.md
 
+### travis :
+[![Build Status](https://travis-ci.org/fack2/PalestinePlaces.svg?branch=master)](https://travis-ci.org/fack2/PalestinePlaces)
 ### Sketch:
 
 ![image](https://user-images.githubusercontent.com/27896127/61692669-c0714a00-ad36-11e9-8608-c476a68b9072.png)
