@@ -5,4 +5,4 @@ const router = require("./router");
 const server = http.createServer(router);
 server.listen(PORT);
 
-console.log(`localhost: ${PORT}`);
+console.log(`server running at https://localhost: ${PORT}`);
