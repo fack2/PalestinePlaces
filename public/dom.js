@@ -22,6 +22,8 @@ buttonSearch.addEventListener("click", e => {
   e.preventDefault();
 
   request(`/search?name=${inputSearch.value}`, data => {
+    info.innerText = "";
+
     data.forEach(element => {
       const place = document.createElement("div");
       place.setAttribute("class", "placeDiv");
@@ -48,5 +50,6 @@ buttonSearch.addEventListener("click", e => {
       place.appendChild(description);
       info.appendChild(place);
     });
+
   });
 });
